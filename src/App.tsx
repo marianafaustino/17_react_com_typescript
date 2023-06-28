@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
 
 function App() {
+
+  // 1- variáveis
+  const name: string = "Mariana"
+  const age: number = 27
+  const isWorking: boolean = false
+
+  // 2- funções
+  const userGreeting = (name:string) : string =>{
+    return `Olá, ${name}`
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>TypeScript com React</h1>
+      <h2>Nome: {name}</h2>
+      <h2>Idade: {age}</h2>
+      {isWorking && (
+        <p>Está trabalhando!</p>
+      )}
+      <h3>{userGreeting(name)}</h3>
     </div>
   );
 }
