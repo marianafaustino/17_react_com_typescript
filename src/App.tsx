@@ -1,5 +1,11 @@
 import React from 'react';
 
+// 4- importação de componentes
+import FirstComponent from './components/FirstComponent';
+
+// 5- desestruturando props
+import SecondComponent from './components/SecondComponent';
+import Destructuring from './components/Destructuring';
 
 function App() {
 
@@ -22,6 +28,9 @@ function App() {
         <p>Está trabalhando!</p>
       )}
       <h3>{userGreeting(name)}</h3>
+      <FirstComponent/>
+      <SecondComponent name='Segundo'/>
+      <Destructuring title='Primeiro post' content='Conteúdo do post' commentsQty={10} tags={["ts",'js', 'react']}/>
     </div>
   );
 }
